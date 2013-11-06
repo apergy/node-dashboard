@@ -1,0 +1,4 @@
+.DS_Store
+.floo*
+.sublime-project
+node_modules/
