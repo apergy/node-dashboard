@@ -1,4 +1,4 @@
-# apergy-dashboard [![Build Status](https://secure.travis-ci.org/apergy/node-dashboard.png?branch=master)](http://travis-ci.org/apergy/node-dashboard)
+# Apergy Dashboard [![Build Status](https://secure.travis-ci.org/apergy/node-dashboard.png?branch=master)](http://travis-ci.org/apergy/node-dashboard)
 
 A responsive dashboard to keep a watchful eye on any service or feed.
 
