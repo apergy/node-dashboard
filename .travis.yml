@@ -1,5 +1,13 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 before_script:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
+deploy:
+  provider: heroku
+  api_key:
+    secure: eL2fJ8f6l8eSAurbgiLet4x8wPes1gBh1mZIrFdXJSpPZceESxusisvIQ6Qa+wRS295yayGjD5cfV9FWUbj8/W8KWPkeLbObKteQTyYQUTqrcp1i7jLfS3VYDmc/GEPSnL7+eA5wgUxiOUQXyt4IcDBySi6Fv+BYEBqr6q5qUFI=
+  app: apergy-dashboard
+  on:
+    branch: master
+    repo: apergy/observify
