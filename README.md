@@ -1,13 +1,13 @@
-# Apergy Dashboard [![Build Status](https://secure.travis-ci.org/apergy/node-dashboard.png?branch=master)](http://travis-ci.org/apergy/node-dashboard)
+# Observify [![Build Status](https://secure.travis-ci.org/apergy/observify.png?branch=master)](http://travis-ci.org/apergy/observify)
 
-A responsive dashboard to keep a watchful eye on any service or feed.
+A responsive dashboard to observe any service or feed.
 
 ## Getting Started
-Install the module with: `npm install apergy-dashboard`
+Install the module with: `npm install observify`
 
 ```javascript
-var apergy_dashboard = require('apergy-dashboard');
-apergy_dashboard.awesome(); // "awesome"
+var observify = require('observify');
+observify.start(); // "awesome"
 ```
 
 ## Documentation

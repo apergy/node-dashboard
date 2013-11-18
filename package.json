@@ -1,6 +1,6 @@
 {
   "name": "apergy-dashboard",
-  "description": "A responsive dashboard to keep a watchful eye on any service or feed.",
+  "description": "A responsive dashboard to observe any service or feed.",
   "version": "0.1.0",
   "homepage": "https://github.com/apergy/node-dashboard",
   "author": {
