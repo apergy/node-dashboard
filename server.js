@@ -5,7 +5,7 @@ var express = require('express'),
     port    = process.env.PORT || 3000;
 
 app.get('/', function(request, response){
-    response.send('Observify');
+    response.send('Observify: Auto-Deployed');
 });
 
 app.listen(port);
