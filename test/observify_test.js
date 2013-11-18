@@ -1,6 +1,6 @@
 'use strict';
 
-var apergy_dashboard = require('../lib/apergy-dashboard.js');
+var observify = require('../lib/observify');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -30,7 +30,7 @@ exports['awesome'] = {
   'no args': function(test) {
     test.expect(1);
     // tests here
-    test.equal(apergy_dashboard.awesome(), 'awesome', 'should be awesome.');
+    test.equal(observify.awesome(), 'awesome', 'should be awesome.');
     test.done();
   },
 };

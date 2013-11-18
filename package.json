@@ -1,8 +1,8 @@
 {
-  "name": "apergy-dashboard",
+  "name": "observify",
   "description": "A responsive dashboard to observe any service or feed.",
   "version": "0.1.0",
-  "homepage": "https://github.com/apergy/node-dashboard",
+  "homepage": "https://github.com/apergy/observify",
   "author": {
     "name": "Richard Edwards",
     "email": "richard@apergy.co.uk",
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/apergy/node-dashboard.git"
+    "url": "git://github.com/apergy/observify.git"
   },
   "bugs": {
-    "url": "https://github.com/apergy/node-dashboard/issues"
+    "url": "https://github.com/apergy/observify/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/apergy/node-dashboard/blob/master/LICENSE-MIT"
+      "url": "https://github.com/apergy/observify/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/apergy-dashboard",
+  "main": "lib/observify",
   "engines": {
     "node": ">= 0.10.0"
   },
