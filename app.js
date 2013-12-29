@@ -1,15 +1,19 @@
-'use strict';
+var express = require('express'),
+    hbs     = require('hbs'),
+    app     = express(),
+    port    = process.env.PORT || 3000;
 
-var express   = require('express'),
-    app       = express(),
-    port      = process.env.PORT || 3000,
-    https     = require('https'),
-    observify = require('./lib/observify');
+app.use(express.logger('tiny'));
+app.use(express.static(__dirname + '/public'));
 
-app.use(observify.logger());
+app.engine('hbs', hbs.__express);
 
-app.get('/', function (request, response) {
-    response.send('Observify: Auto-Deployed');
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/view');
+
+
+app.get('*', function (request, response) {
+    response.render('index', { name: 'Apergy' });
 });
 
 app.listen(port);
