@@ -28,3 +28,13 @@ module.exports = (grunt) ->
     'bower',
     'requirejs'
   ]
+
+  grunt.registerTask 'test', [
+    'coffeelint'
+    'jasmine_node'
+    'clean',
+    'coffee',
+    'jshint',
+    'bower',
+    'requirejs'
+  ]
