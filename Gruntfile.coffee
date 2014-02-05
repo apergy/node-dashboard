@@ -29,5 +29,5 @@ module.exports = (grunt) ->
     'requirejs'
   ]
 
-  grunt.registerTask('heroku:development', 'default');
-  grunt.registerTask('heroku:production', 'default');
+  grunt.registerTask 'heroku:development', 'default'
+  grunt.registerTask 'heroku:production', 'default'
