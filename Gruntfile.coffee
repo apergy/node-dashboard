@@ -18,7 +18,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-requirejs'
 
-  grunt.registerTask 'default', [
+  grunt.registerTask 'heroku:development', [
     'coffeelint',
     'jasmine_node',
     'clean',
@@ -29,5 +29,12 @@ module.exports = (grunt) ->
     'requirejs'
   ]
 
-  grunt.registerTask 'heroku:development', 'default'
-  grunt.registerTask 'heroku:production', 'default'
+  grunt.registerTask 'heroku:production', [
+    'clean',
+    'coffee',
+    'sass',
+    'bower',
+    'requirejs'
+  ]
+
+  grunt.registerTask 'default', 'heroku:development'
