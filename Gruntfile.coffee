@@ -28,3 +28,6 @@ module.exports = (grunt) ->
     'bower',
     'requirejs'
   ]
+
+  grunt.registerTask('heroku:development', 'default');
+  grunt.registerTask('heroku:production', 'default');
