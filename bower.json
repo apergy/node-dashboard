@@ -1,0 +1,19 @@
+{
+  "name": "observify",
+  "version": "0.1.0",
+  "homepage": "https://github.com/apergy/observify",
+  "authors": [
+    "Richard Edwards <richard@apergy.co.uk>"
+  ],
+  "description": "A responsive dashboard to observe any service or feed.",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2",
+    "backbone": "~1.1.0",
+    "almond": "~0.2.7",
+    "bootstrap": "~3.0.3",
+    "socket.io-client": "~0.9.16"
+  }
+}
