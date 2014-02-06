@@ -34,6 +34,8 @@
     "socket.io": "~0.9.16",
     "lodash": "~2.4.1",
     "coffee-script": "~1.7.1",
+  },
+  "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-coffeelint": "~0.0.8",
     "grunt-bower-task": "~0.3.4",
