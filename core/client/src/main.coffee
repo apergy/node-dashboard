@@ -2,7 +2,7 @@ define (require) ->
   $ = require 'jquery'
   io = require 'io'
 
-  socket = io.connect 'http://localhost:3000'
+  socket = io.connect window.location.origin
 
   socket.on 'github', (data) ->
     $('.github').removeClass 'good bad'
