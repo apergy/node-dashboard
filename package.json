@@ -33,7 +33,7 @@
     "hbs": "~2.4.0",
     "socket.io": "~0.9.16",
     "lodash": "~2.4.1",
-    "coffee-script": "~1.7.1",
+    "coffee-script": "~1.7.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
