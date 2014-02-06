@@ -1,2 +1,5 @@
+.grunt/
+.sass-cache/
 node_modules
 core/built/
+_SpecRunner.html

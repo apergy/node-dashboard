@@ -1,4 +1,5 @@
 $red-error: #d47070;
+$yellow-warning: #ffee00;
 $green-success: #70d47f;
 
 body {
@@ -41,12 +42,25 @@ body {
         color: darken($red-error, 5);
 
         span.fa {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
             line-height: 250px;
             font-size: 200px;
             transition: all 0.5s ease;
         }
 
-        .fa-thumbs-up { opacity: 0; }
+        .fa-exclamation-triangle, .fa-thumbs-up { opacity: 0; }
+    }
+
+    &.minor {
+        background: $yellow-warning;
+        border-color: darken($yellow-warning, 10);
+
+        .back {
+            color: darken($yellow-warning, 5);
+            .fa-exclamation-triangle { opacity: 1; }
+            .fa-thumbs-up, .fa-thumbs-down { opacity: 0; }
+        }
     }
 
     &.good {
@@ -56,7 +70,7 @@ body {
         .back {
             color: darken($green-success, 5);
             .fa-thumbs-up { opacity: 1; }
-            .fa-thumbs-down { opacity: 0; }
+            .fa-exclamation-triangle, .fa-thumbs-down { opacity: 0; }
         }
     }
 }
