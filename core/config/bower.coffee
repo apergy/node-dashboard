@@ -1,7 +1,6 @@
 module.exports =
   install:
     options:
-      targetDir: 'core/built/component'
+      targetDir: 'built/component'
       install: true
       verbose: true
-      cleanup: true

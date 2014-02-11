@@ -1,76 +1,51 @@
+$grey-neutral: #757575;
 $red-error: #d47070;
-$yellow-warning: #ffee00;
+$yellow-warning: #f2d857;
 $green-success: #70d47f;
 
 body {
     padding: 5px;
+    letter-spacing: 4px;
     background: #1f1f1f;
 }
 
-.row {
-    margin: 0px;
-}
+.row { margin: 0px; }
+.col-md-4 { padding: 5px; }
 
-.col-md-4 {
-    padding: 5px;
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-family: 'Press Start 2P';
+    text-transform: uppercase;
+    line-height: 210px;
+
+    &.fa {
+        font-size: 100px;
+        line-height: 210px;
+    }
 }
 
 .widget {
     padding: 20px;
     height: 250px;
-    background: $red-error;
+    background: $grey-neutral;
     color: white;
     text-align: center;
-    border: solid 5px darken($red-error, 10);
+    border: solid 5px darken($grey-neutral, 10);
     transition: all 0.5s ease;
 
-    h1 {
-        margin: 0;
-        line-height: 270px;
-    }
-
-    .front, .back {
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-    }
-
-    .front {
-        z-index: 1;
-    }
-
-    .back {
-        color: darken($red-error, 5);
-
-        span.fa {
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            line-height: 250px;
-            font-size: 200px;
-            transition: all 0.5s ease;
-        }
-
-        .fa-exclamation-triangle, .fa-thumbs-up { opacity: 0; }
+    &.bad {
+        background: $red-error;
+        border-color: darken($red-error, 10);
     }
 
     &.minor {
         background: $yellow-warning;
         border-color: darken($yellow-warning, 10);
-
-        .back {
-            color: darken($yellow-warning, 5);
-            .fa-exclamation-triangle { opacity: 1; }
-            .fa-thumbs-up, .fa-thumbs-down { opacity: 0; }
-        }
     }
 
     &.good {
         background: $green-success;
         border-color: darken($green-success, 10);
-
-        .back {
-            color: darken($green-success, 5);
-            .fa-thumbs-up { opacity: 1; }
-            .fa-exclamation-triangle, .fa-thumbs-down { opacity: 0; }
-        }
     }
 }

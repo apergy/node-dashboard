@@ -1,13 +1,18 @@
 module.exports = (grunt) ->
+
+  #  1. We need to compile the widgets coffee, sass and templates
+  #  2. We need to copy the compiled widgets into the built directory
+
   grunt.initConfig
-    coffeelint: require './config/coffeelint'
-    jasmine_node: require './config/jasmine'
-    clean: require './config/clean'
-    coffee: require './config/coffee'
-    jshint: require './config/jshint'
-    sass: require './config/sass'
-    bower: require './config/bower'
-    requirejs: require './config/requirejs'
+    coffeelint: require './core/config/coffeelint'
+    jasmine_node: require './core/config/jasmine'
+    clean: require './core/config/clean'
+    coffee: require './core/config/coffee'
+    jshint: require './core/config/jshint'
+    sass: require './core/config/sass'
+    bower: require './core/config/bower'
+    requirejs: require './core/config/requirejs'
+    watch: require './core/config/watch'
 
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-jasmine-node'
@@ -17,8 +22,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-requirejs'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'heroku:development', [
+  grunt.registerTask 'default', [
     'coffeelint',
     'jasmine_node',
     'clean',
@@ -28,13 +34,3 @@ module.exports = (grunt) ->
     'bower',
     'requirejs'
   ]
-
-  grunt.registerTask 'heroku:production', [
-    'clean',
-    'coffee',
-    'sass',
-    'bower',
-    'requirejs'
-  ]
-
-  grunt.registerTask 'default', 'heroku:development'

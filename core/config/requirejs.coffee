@@ -1,10 +1,10 @@
 module.exports =
   dist:
     options:
-      baseUrl: 'core/built/js'
+      baseUrl: 'built/js'
       name: '../component/almond/almond'
-      deps: [ 'main' ]
-      insertRequire: [ 'main' ]
+      deps: [ 'apergy/dashboard' ]
+      insertRequire: [ 'apergy/dashboard' ]
       paths:
         jquery: '../component/jquery/jquery'
         underscore: '../component/underscore/underscore'
@@ -21,4 +21,4 @@ module.exports =
       optimize: 'uglify2'
       preserveLicenseComments: false
       generateSourceMaps: true
-      out: 'core/built/observify.min.js'
+      out: 'built/observify.min.js'

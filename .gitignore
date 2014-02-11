@@ -1,5 +1,5 @@
-.grunt/
-.sass-cache/
+.grunt
+.sass-cache
 node_modules
-core/built/
+built
 _SpecRunner.html

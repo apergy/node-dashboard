@@ -5,7 +5,7 @@ observify = require './core/server/src/observify'
 
 app = express()
 
-app.use express.static __dirname + '/core/built'
+app.use express.static __dirname + '/built'
 app.engine 'hbs', hbs.__express
 app.set 'view engine', 'hbs'
 app.set 'views', __dirname + '/core/server/src/view'
@@ -16,8 +16,9 @@ app.get '/', (request, response) ->
 server = http.createServer app
 dashboard = observify server
 
-dashboard.schedule require('./jobs/github'), 30000
-dashboard.schedule require('./jobs/apergy'), 30000
-dashboard.schedule require('./jobs/google'), 30000
+dashboard.schedule require('./job/github'), 30000
+dashboard.schedule require('./job/apergy'), 30000
+dashboard.schedule require('./job/apple'), 30000
+dashboard.schedule require('./job/bitcoin'), 10000
 
 server.listen process.env.PORT || 3000

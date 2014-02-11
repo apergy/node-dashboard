@@ -13,10 +13,6 @@ observify =
 
 module.exports = (server) ->
   io = socketio.listen server
-
-  io.sockets.on 'connection', (socket) ->
-    _.each jobs, (job) -> job.call this
-
   sockets = io.sockets
 
   return observify
