@@ -19,6 +19,6 @@ dashboard = observify server
 dashboard.schedule require('./job/github'), 30000
 dashboard.schedule require('./job/apergy'), 30000
 dashboard.schedule require('./job/lastminute'), 30000
-dashboard.schedule require('./job/bitcoin'), 10000
+dashboard.schedule require('./job/bitcoin'), 30000
 
 server.listen process.env.PORT || 3000

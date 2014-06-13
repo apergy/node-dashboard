@@ -1,13 +1,11 @@
 http = require 'http'
 
-source = [ 'bitfinex', 'bitstamp', 'btce', 'localbitcoins' ]
-unit = [ 'btc', 'gbp' ]
-
 module.exports = (sockets) ->
-  console.log "Retrieving bitcoin data... http://preev.com/pulse/units:#{source.join '+'}/sources:#{unit.join '+'}"
-  http.get "http://preev.com/pulse/units:#{source.join '+'}/sources:#{unit.join '+'}", (response) ->
-    response.on 'data', (data) ->
-      sockets.emit 'bitcoin', JSON.parse data
+  http.get "http://api.bitcoincharts.com/v1/weighted_prices.json", (response) ->
+    fullData = ''
 
-    response.on 'error', () ->
-      console.log arguments
+    response.on 'data', (data) ->
+      fullData += data
+
+    response.on 'end', () ->
+      sockets.emit 'bitcoin', JSON.parse fullData
