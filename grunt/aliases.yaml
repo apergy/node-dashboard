@@ -1,4 +1,9 @@
 default:
-    - 'concurrent:first'
-    - 'concurrent:second'
-    - 'concurrent:third'
+    - 'coffeelint'
+    - 'jasmine_node'
+    - 'clean'
+    - 'coffee'
+    - 'sass'
+    - 'jshint'
+    - 'bower'
+    - 'requirejs'

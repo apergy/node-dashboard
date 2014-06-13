@@ -2,7 +2,7 @@ define (require) ->
   Backbone = require 'backbone'
 
   Backbone.View.extend
-    el: '.apple'
+    el: '.lastminute'
 
     initialize: () ->
       @on 'data', @render

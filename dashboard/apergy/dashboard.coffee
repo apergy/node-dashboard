@@ -7,8 +7,8 @@ define (require) ->
   ApergyWidget = require 'apergy/widget/apergy'
   apergyWidget = new ApergyWidget()
 
-  AppleWidget = require 'apergy/widget/apple'
-  appleWidget = new AppleWidget()
+  LastminuteWidget = require 'apergy/widget/lastminute'
+  lastminuteWidget = new LastminuteWidget()
 
   BitcoinWidget = require 'apergy/widget/bitcoin'
   bitcoinWidget = new BitcoinWidget()
@@ -16,7 +16,7 @@ define (require) ->
   dashboard = new Observify()
   dashboard.addWidget 'github', githubWidget
   dashboard.addWidget 'apergy', apergyWidget
-  dashboard.addWidget 'apple', appleWidget
+  dashboard.addWidget 'lastminute', lastminuteWidget
   dashboard.addWidget 'bitcoin', bitcoinWidget
 
   return dashboard

@@ -1,9 +1,13 @@
 http = require 'http'
 
-source = [ 'bitstamp', 'btce', 'localbitcoins', 'mtgox' ]
+source = [ 'bitfinex', 'bitstamp', 'btce', 'localbitcoins' ]
 unit = [ 'btc', 'gbp' ]
 
 module.exports = (sockets) ->
-  http.get "http://preev.com/pulse/source:#{source.join ','}/unit:#{unit.join ','}", (response) ->
+  console.log "Retrieving bitcoin data... http://preev.com/pulse/units:#{source.join '+'}/sources:#{unit.join '+'}"
+  http.get "http://preev.com/pulse/units:#{source.join '+'}/sources:#{unit.join '+'}", (response) ->
     response.on 'data', (data) ->
       sockets.emit 'bitcoin', JSON.parse data
+
+    response.on 'error', () ->
+      console.log arguments
