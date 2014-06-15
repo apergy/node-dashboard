@@ -8,9 +8,10 @@ define (require) ->
       @on 'data', @render
 
     render: (data) ->
-      @price = parseFloat data.GBP['7d'], 10
+      @daysPrice = parseFloat data.GBP['24h'], 10
+      @weeksPrice = parseFloat data.GBP['7d'], 10
 
-      @$('.gbp').text @price.toFixed 1
-      @$el.toggleClass 'bad', @price <= 440
-      @$el.toggleClass 'minor', @price > 440 && @price < 550
-      @$el.toggleClass 'good', @price >= 550
+      @$('.gbp').text @daysPrice.toFixed 1
+      @$el.toggleClass 'bad', @daysPrice <= @weeksPrice
+      @$el.toggleClass 'minor', @daysPrice == @weeksPrice
+      @$el.toggleClass 'good', @daysPrice >= @weeksPrice
